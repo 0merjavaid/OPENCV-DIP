@@ -11,7 +11,10 @@ img = imread('images.jpg');
 imagesc(img);
 
 subplot (1,1,1), imshow('images.jpg');
-
+%using different color map to display image
+[A,map] = imread('images.jpg');
+map(:,1) = 0;
+colormap(gca,map)
 
 
 %Task two is to extract 3 channels from a color image
